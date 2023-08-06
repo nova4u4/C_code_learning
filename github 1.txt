@@ -1,0 +1,16 @@
+githu操作 图形化/命令行
+
+
+1.图形化 
+
+（1）git克隆   （2） add 预添加到本地仓库  （3）commit 正式提交到本地仓库 （4）push 上传
+
+
+2.命令行（git bashi中）
+
+ （1）git clone +http  （2）git add xxxx  (3) git commit -m "备注"   (4) git push
+
+
+git其他功能 在gitbash中 
+其他符合汇编
+ls展示 cd进入
