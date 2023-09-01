@@ -1,0 +1,5 @@
+﻿  test.c
+E:\C_\game_2_myself\game_2_myself\test.c(20,29): warning C4020: “InitBoard”: 实参太多
+E:\C_\game_2_myself\game_2_myself\test.c(21,29): warning C4020: “InitBoard”: 实参太多
+E:\C_\game_2_myself\game_2_myself\test.c(46,10): warning C4476: "printf": 格式说明符中的类型字段字符“\xe8”未知
+  game_2_myself.vcxproj -> E:\C_\game_2_myself\x64\Debug\game_2_myself.exe
