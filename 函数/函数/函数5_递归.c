@@ -258,6 +258,19 @@ void reverse_string1(char* arr)
 	*(arr + len - 1) = tmp;  // 递归后再复制 否则不会缩短
 }
 
+// 递归思路2 如果没有限制参数数目
+// 利用下标换首尾 然后递归变下标
+
+void reverse(char arr[], int left, int right)
+{
+	char tmp = arr[left];
+	arr[left] = arr[right];
+	arr[right] = tmp;
+	if (left < right-1)
+		reverse(arr, left + 1, right - 1);
+}
+
+
 #include<string.h>
 //非递归 则使用下标 定义两个指针(用指针了就都用指针)
 void reverse_string2(char* arr)
@@ -275,11 +288,13 @@ void reverse_string2(char* arr)
 		right--;
 	}
 }
-int main7_1()
+int main()
 {
-	char arr[10] = {"0"};
+	char arr[10] = { "0" };
 	scanf("%s", arr);
-	reverse_string1(arr);//由于是操作数组中的数 传递指针(数组名就是首元素地址)
+	int left = 0;
+	int right = strlen(arr) - 1;
+	reverse(arr,left,right);//由于是操作数组中的数 传递指针(数组名就是首元素地址)
 	printf("%s\n", arr);
 	return 0;
 }
@@ -321,7 +336,7 @@ int k_fang(int n, int k)
 		return n;
 }
 
-int main()
+int mainkkkkkkkk()
 {
 	int n;
 	int k;

@@ -1,0 +1,3 @@
+﻿  调试1.c
+E:\C_\调试\调试\调试1.c(90,15): warning C4098: “my_strcpy”:“void”函数返回值
+  调试.vcxproj -> E:\C_\调试\x64\Debug\调试.exe

@@ -148,7 +148,7 @@ void printou(int n)
     printf("\n");
 }
 
-int main()
+int maindsa()
 {
     int num = 0;
     scanf("%d", &num);
@@ -157,4 +157,64 @@ int main()
     printf("偶数位\n");
     printou(num);
     
+}
+
+
+
+//求出0～100000之间的所有“水仙花数”并输出。
+
+//“水仙花数”是指一个n位数，
+//其各位数字的n次方之和确好等于该数本身，
+//如:153＝1 ^ 3＋5 ^ 3＋3 ^ 3，则153是一个“水仙花数”。
+
+
+int length1(int i)
+{
+    // 1234/10 =123 /10 =12 /10 = 1 /10 = 0 
+    int n = 1;
+    int tmp = i;
+    while (tmp /10)
+    {
+        tmp = tmp/10;
+        n = n + 1;
+    }
+
+    return n;
+}
+
+int is_lily_1(int i,int n )
+{
+    // 1.分离出每一位数    除和模
+    int sum = 0;
+    int tmp = i;
+    while (tmp)
+    {
+        sum = sum + pow(tmp % 10, n);
+        tmp = tmp / 10;
+    }
+    if (sum == i)
+        return 1;
+    else
+        return 0;
+}
+
+int main()
+{
+
+    int i = 0;
+    for (i = 0; i <= 100000; i++)
+    {
+        // 1.确定是几位数
+        int n = length1(i);
+
+        // 2.确定是否是水仙花数
+        int y_o_n = is_lily_1(i,n);
+        
+        // 3.打印
+        if (y_o_n == 1)
+            printf("%d ", i);
+    }
+
+
+    return 0;
 }
